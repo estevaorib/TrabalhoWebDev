@@ -17,27 +17,27 @@
 
             <div class="opcoes">
                 <div>
-                    <input type="radio" name="op" id="texto" value="texto">
+                    <input type="radio" name="op" id="texto" value="texto" onclick="this.form.submit()">
                     <label for="texto">Texto</label>
                 </div>
                 <div>
-                    <input type="radio" name="op" id="senha" value="senha">
+                    <input type="radio" name="op" id="senha" value="senha" onclick="this.form.submit()">
                     <label for="senha">Senha</label>
                 </div>
                 <div>
-                    <input type="radio" name="op" id="botao" value="botao">
+                    <input type="radio" name="op" id="botao" value="botao" onclick="this.form.submit()">
                     <label for="botao">Botão</label>
                 </div>
                 <div>
-                    <input type="radio" name="op" id="radio" value="radio">
+                    <input type="radio" name="op" id="radio" value="radio" onclick="this.form.submit()">
                     <label for="radio">Rádio</label>
                 </div>
                 <div>
-                    <input type="radio" name="op" id="selecao" value="selecao">
+                    <input type="radio" name="op" id="selecao" value="selecao" onclick="this.form.submit()">
                     <label for="selecao">Caixa de Seleção</label>
                 </div>
                 <div>
-                    <input type="radio" name="op" id="faixa" value="faixa">
+                    <input type="radio" name="op" id="faixa" value="faixa" onclick="this.form.submit()">
                     <label for="faixa">Faixa</label>
                 </div>
             </div>
