@@ -12,7 +12,7 @@
             
             <div class="cabecalho">
                 <label for="quant">Quantidade de elementos: </label>
-                <input type="number" name="quant" id="quant" min=1 max=15 value="0">
+                <input type="number" name="quant" id="quant" min=1 max=15 value="1">
             </div>
 
             <div class="opcoes">
@@ -86,6 +86,19 @@
                 for($i = 0; $i < $quant; $i++){
                     echo "&lt;input type=\"radio\" name=\"radio\" id=\"radio$i\"&gt;<br>";
                     echo "&lt;label for=\"radio$i\"&gt;Radio $i&lt;/label&gt;<br><br>";
+                }
+            }
+            else if($opselected == "selecao"){
+                for($i = 0; $i < $quant; $i++){
+                    echo "<input type=\"checkbox\" name=\"checkbox$i\" id=\"checkbox$i\">";
+                    echo "<label for=\"checkbox$i\">Caixa de Seleção $i</label><br>";
+                }
+
+                echo "<br>";
+        
+                for($i = 0; $i < $quant; $i++){
+                    echo "&lt;input type=\"checkbox\" name=\"checkbox$i\" id=\"checkbox$i\"&gt;<br>";
+                    echo "&lt;label for=\"checkbox$i\"&gt;Caixa de Seleção $i&lt;/label&gt;<br><br>";
                 }
             }
         }
