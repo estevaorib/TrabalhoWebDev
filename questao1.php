@@ -101,6 +101,23 @@
                     echo "&lt;label for=\"checkbox$i\"&gt;Caixa de Seleção $i&lt;/label&gt;<br><br>";
                 }
             }
+            else if($opselected == "faixa"){
+                $valuefaixa = 5;
+                for($i = 0; $i < $quant; $i++){
+                    echo "<input type=\"range\" name=\"range$i\" id=\"range$i\" min=\"0\" max =\"100\" value=\"$valuefaixa\">";
+                    echo "<label for=\"range$i\">Faixa $i</label><br>";
+                    $valuefaixa = $valuefaixa + 5;
+                }
+
+                echo "<br>";
+        
+                $valuefaixa = 5;
+                for($i = 0; $i < $quant; $i++){
+                    echo "&lt;input type=\"range\" name=\"range$i\" id=\"range$i\" min=\"0\" max=\"100\" value=\"$valuefaixa\"&gt;<br>";
+                    echo "&lt;label for=\"range$i\"&gt;Faixa $i&lt;/label&gt;<br><br>";
+                    $valuefaixa = $valuefaixa + 5;
+                }
+            }
         }
         else{
             echo "Escolha uma opção de entrada!";
