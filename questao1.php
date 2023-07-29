@@ -79,11 +79,13 @@
             }
             else if($opselected == "radio"){
                 for($i = 0; $i < $quant; $i++){
-                    echo "<input type=\"radio\" name=\"radio\" id=\"\"><br>";
+                    echo "<input type=\"radio\" name=\"radio\" id=\"radio$i\">";
+                    echo "<label for=\"radio$i\">Radio $i</label><br>";
                 }
         
                 for($i = 0; $i < $quant; $i++){
-                    echo  "&lt;input type=\"button\" value=\"Botão $i\"&gt;<br>";
+                    echo "&lt;input type=\"radio\" name=\"radio\" id=\"radio$i\"&gt;<br>";
+                    echo "&lt;label for=\"radio$i\"&gt;Radio $i&lt;/label&gt;<br><br>";
                 }
             }
         }
