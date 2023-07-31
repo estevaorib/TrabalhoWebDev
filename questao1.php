@@ -11,6 +11,7 @@
     </header>
 
     <main>
+        <h1>Trabalho: Questão 01</h1>
         <form method="get" action="">
             <fieldset>
                 <legend>Critérios para geração</legend>
@@ -48,8 +49,10 @@
             </fieldset>
         </form>
         <?php
+        
         $quant = isset($_GET['quant']) ? intval($_GET['quant']) : 0;
         $opselected = isset($_GET['op']) ? $_GET['op'] : null;
+
         if($quant >= 1 && $quant <= 15){
             if($opselected != null){
                 if($opselected == "texto"){
