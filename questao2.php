@@ -29,7 +29,7 @@
             <tbody>
                 <?php 
                     for($j = 146; $j <= 210; $j++){
-                        echo "<tr>";
+                        echo "<tr class=\"coluna\">";
                         echo "<td>$j</td>";
                         for($i = 46; $i <= 120; $i++){
                             $imc =  $i / ($j * $j) * 10000;

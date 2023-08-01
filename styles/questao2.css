@@ -24,7 +24,7 @@
 }
 
 .colorido:hover{
-    background-color: rgba(211, 211, 211, 0.438);
+    opacity: .3;
 }
 
 th{
@@ -33,11 +33,15 @@ th{
 }
 
 table{
-    max-width: 90%;
-    overflow-x: hidden;
+    width: 100%;
+    table-layout: fixed;
 }
 
 td{
-    width: 5px;
-    height: 5px;
+    width: 1rem !important; 
+    height: .5rem !important;
+}
+
+.coluna{
+    padding-right: 10px;
 }
