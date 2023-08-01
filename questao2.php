@@ -33,29 +33,31 @@
                         echo "<td>$j</td>";
                         for($i = 46; $i <= 120; $i++){
                             $imc =  $i / ($j * $j) * 10000;
+                            $imcformatado = number_format($imc, 1, '.');
+
                             if($imc <= 16){
-                                echo "<td class=\"muitograve\"></td>";
+                                echo "<td class=\"muitograve\" title=\"Baixo muito grave&#013;$i kg&#013;$j cm&#013;$imcformatado\"></td>";
                             }
                             else if($imc > 16 && $imc <= 17){
-                                echo "<td class=\"grave\"></td>";
+                                echo "<td class=\"grave\" title=\"Baixo grave&#013;$i kg&#013;$j cm&#013;$imcformatado\"></td>";
                             }
                             else if($imc > 17 && $imc <= 18.5){
-                                echo "<td class=\"baixo\"></td>";
+                                echo "<td class=\"baixo\" title=\"Baixo&#013;$i kg&#013;$j cm&#013;$imcformatado\"></td>";
                             }
                             else if($imc > 18.5 && $imc <= 25){
-                                echo "<td class=\"ideal\"></td>";
+                                echo "<td class=\"ideal\" title=\"Ideal&#013;$i kg&#013;$j cm&#013;$imcformatado\"></td>";
                             }
                             else if($imc > 25 && $imc <= 30){
-                                echo "<td class=\"sobrepeso\"></td>";
+                                echo "<td class=\"sobrepeso\" title=\"Sobrepeso&#013;$i kg&#013;$j cm&#013;$imcformatado\"></td>";
                             }
                             else if($imc > 30 && $imc <= 35){
-                                echo "<td class=\"obesidade1\"></td>";
+                                echo "<td class=\"obesidade1\" title=\"Obesidade I&#013;$i kg&#013;$j cm&#013;$imcformatado\"></td>";
                             }
                             else if($imc > 35 && $imc <= 40){
-                                echo "<td class=\"obesidade2\"></td>";
+                                echo "<td class=\"obesidade2\" title=\"Obesidade II&#013;$i kg&#013;$j cm&#013;$imcformatado\"></td>";
                             }
                             else if($imc > 40){
-                                echo "<td class=\"obesidade3\"></td>";
+                                echo "<td class=\"obesidade3\" title=\"Obesidade III&#013;$i kg&#013;$j cm&#013;$imcformatado\"></td>";
                             }
                         }
                         echo "</tr>";
