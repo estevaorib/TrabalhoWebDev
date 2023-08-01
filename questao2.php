@@ -30,7 +30,8 @@
                     for($j = 146; $j <= 210; $j++){
                         echo "<tr>";
                         echo "<td>$j</td>";
-                        for($i = 147; $i <= 210; $i++){
+                        for($i = 46; $i <= 120; $i++){
+                            $imc =  $i / ($j * $j) * 10000;
                             if($imc <= 16){
                                 echo "<td class=\"muitograve\"";
                             }
