@@ -33,3 +33,15 @@
             <input type="submit" value="Simular">
         </fieldset>
     </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] === "GET") {
+        function calcularRendimento($valorInicial, $aporteMensal, $taxaRendimento)
+        {
+            $rendimento = ($valorInicial + $aporteMensal) * ($taxaRendimento / 100);
+            $total = $valorInicial + $aporteMensal + $rendimento;
+            return array($rendimento, $total);
+        }
+        $aporte_inicial = floatval($_GET["aporte_inicial"]);
+        $periodo = intval($_GET["periodo"]);
+        $rendimento_mensal = floatval($_GET["rendimento_mensal"]);
+        $aporte_mensal = floatval($_GET["aporte_mensal"]);
