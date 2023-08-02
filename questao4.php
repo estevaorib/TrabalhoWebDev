@@ -45,3 +45,26 @@
         $periodo = intval($_GET["periodo"]);
         $rendimento_mensal = floatval($_GET["rendimento_mensal"]);
         $aporte_mensal = floatval($_GET["aporte_mensal"]);
+    }
+    $resultados = array();
+    $valorAtual = $aporte_inicial;
+    for ($mes = 1; $mes <= $periodo; $mes++) {
+        if ($mes === 1) {
+            $aporte = 0; // No primeiro mês não há aporte mensal
+        } else {
+            $aporte = $aporte_mensal;
+        }
+
+        list($rendimento, $total) = calcularRendimento($valorAtual, $aporte, $rendimento_mensal);
+
+        $resultados[] = array(
+            'mes' => $mes,
+            'valor_inicial' => $valorAtual,
+            'aporte_mensal' => $aporte,
+            'rendimento' => $rendimento,
+            'total' => $total
+        );
+
+        $valorAtual = $total;
+    }
+    ?>
