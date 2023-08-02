@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 1</title>
+    <link rel="stylesheet" href="../trabalho3trimestre/styles/global.css">
 </head>
 <body>
     <header>
@@ -87,10 +88,12 @@
                         echo "<input type=\"radio\" name=\"radio\" id=\"radio$i\">";
                         echo "<label for=\"radio$i\">Radio $i</label><br>";
                     }
+
+                    echo "<br>";
         
                     for($i = 0; $i < $quant; $i++){
-                        echo "&lt;input type=\"radio\" name=\"radio\" id=\"radio$i\"&gt;<br>";
-                        echo "&lt;label for=\"radio$i\"&gt;Radio $i&lt;/label&gt;<br><br>";
+                        echo "&lt;input type=\"radio\" name=\"radio\" id=\"radio$i\"&gt;";
+                        echo "&lt;label for=\"radio$i\"&gt;Radio $i&lt;/label&gt;<br>";
                     }
                 }
                 else if($opselected == "selecao"){
@@ -101,8 +104,8 @@
                     echo "<br>";
         
                     for($i = 0; $i < $quant; $i++){
-                        echo "&lt;input type=\"checkbox\" name=\"checkbox$i\" id=\"checkbox$i\"&gt;<br>";
-                        echo "&lt;label for=\"checkbox$i\"&gt;Caixa de Seleção $i&lt;/label&gt;<br><br>";
+                        echo "&lt;input type=\"checkbox\" name=\"checkbox$i\" id=\"checkbox$i\"&gt;";
+                        echo "&lt;label for=\"checkbox$i\"&gt;Caixa de Seleção $i&lt;/label&gt;<br>";
                     }
                 }
                 else if($opselected == "faixa"){
@@ -116,8 +119,8 @@
         
                     $valuefaixa = 5;
                     for($i = 0; $i < $quant; $i++){
-                        echo "&lt;input type=\"range\" name=\"range$i\" id=\"range$i\" min=\"0\" max=\"100\" value=\"$valuefaixa\"&gt;<br>";
-                        echo "&lt;label for=\"range$i\"&gt;Faixa $i&lt;/label&gt;<br><br>";
+                        echo "&lt;input type=\"range\" name=\"range$i\" id=\"range$i\" min=\"0\" max=\"100\" value=\"$valuefaixa\"&gt;";
+                        echo "&lt;label for=\"range$i\"&gt;Faixa $i&lt;/label&gt;<br>";
                         $valuefaixa = $valuefaixa + 5;
                     }
                 }
@@ -134,7 +137,7 @@
     </main>
 
     <footer>
-        <p>Estevão Ribeiro e Ítalo Augusto - &copy;2023</p>
+        <p class="copy">Estevão Ribeiro e Ítalo Augusto - &copy;2023</p>
     </footer>
 </body>
 </html>

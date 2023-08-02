@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+h2, p.copy{
+    background-color: gray;
+    color: black;
+    padding: .5rem;
+}
+
+h1{
+    background-color: black;
+    color: white;
+    padding: .5rem;
+}

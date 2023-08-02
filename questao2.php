@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 2</title>
     <link rel="stylesheet" href="../trabalho3trimestre/styles/questao2.css">
+    <link rel="stylesheet" href="../trabalho3trimestre/styles/global.css">
 </head>
 <body>
     <header>
@@ -65,10 +66,11 @@
                 </tbody>
             </table>
         </div>
+        <p><a href="index.php">Página Inicial</a></p>
     </main>
 
     <footer>
-        <p>Estevão Ribeiro e Ítalo Augusto - &copy;2023</p>
+        <p class="copy">Estevão Ribeiro e Ítalo Augusto - &copy;2023</p>
     </footer>
 </body>
 </html>
