@@ -49,10 +49,12 @@
                 </div>
             </fieldset>
         </form>
-        <?php
+
+        <hr>
         
-        $quant = isset($_GET['quant']) ? intval($_GET['quant']) : 0;
-        $opselected = isset($_GET['op']) ? $_GET['op'] : null;
+        <?php
+        $quant = isset($_GET['quant']) ? intval($_GET['quant']) : 1;
+        $opselected = isset($_GET['op']) ? $_GET['op'] : 'op';
 
         if($quant >= 1 && $quant <= 15){
             if($opselected != null){
@@ -60,6 +62,8 @@
                     for($i = 0; $i < $quant; $i++){
                         echo "<input type=\"text\" name=\"text$i\" id=\"text$i\" placeholder=\"Caixa de Texto $i\"><br>";
                     }
+
+                    echo "<br>";
         
                     for($i = 0; $i < $quant; $i++){
                         echo  "&lt;input type=\"text\" name=\"text$i\" id=\"text$i\" placeholder=\"Caixa de Texto $i\"&gt;<br>";
@@ -69,6 +73,8 @@
                     for($i = 0; $i < $quant; $i++){
                         echo "<input type=\"password\" name=\"password$i\" id=\"password$i\" placeholder=\"Senha $i\"><br>";
                     }
+
+                    echo "<br>";
         
                     for($i = 0; $i < $quant; $i++){
                         echo  "&lt;input type=\"password\" name=\"password$i\" id=\"password$i\" placeholder=\"Senha $i\"&gt;<br>";
@@ -78,6 +84,8 @@
                     for($i = 0; $i < $quant; $i++){
                         echo "<input type=\"button\" value=\"Botão $i\"><br>";
                     }
+
+                    echo "<br>";
         
                     for($i = 0; $i < $quant; $i++){
                         echo  "&lt;input type=\"button\" value=\"Botão $i\"&gt;<br>";
