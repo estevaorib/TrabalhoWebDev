@@ -109,78 +109,78 @@
             if($quant >= 1 && $quant <= 15){
                 if($opselected != null){
                     if($opselected == "texto"){
+                        $num = 1;
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo "<input type=\"text\" name=\"text$num\" id=\"text$num\" placeholder=\"Caixa de Texto $num\"><br>";
                             $num++;
                         }
 
                         echo "<br>";
-            
+                        $num = 1;
+                        
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo  "<code>&lt;input type=\"text\" name=\"text$num\" id=\"text$num\" placeholder=\"Caixa de Texto $num\"&gt;</code><br>";
                             $num++;
                         }
                     }
                     else if($opselected == "senha"){
+                        $num = 1;
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo "<input type=\"password\" name=\"password$num\" id=\"password$num\" placeholder=\"Senha $num\"><br>";
                             $num++;
                         }
 
                         echo "<br>";
+                        $num = 1;
             
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo  "<code>&lt;input type=\"password\" name=\"password$num\" id=\"password$num\" placeholder=\"Senha $num\"&gt;</code><br>";
                             $num++;
                         }
                     }
                     else if($opselected == "botao"){
+                        $num = 1;
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo "<input type=\"button\" value=\"Botão $num\"><br>";
                             $num++;
                         }
 
                         echo "<br>";
+                        $num = 1;
             
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo  "<code>&lt;input type=\"button\" value=\"Botão $num\"&gt;</code><br>";
                             $num++;
                         }
                     }
                     else if($opselected == "radio"){
+                        $num = 1;
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo "<input type=\"radio\" name=\"radio\" id=\"radio$num\">";
                             echo "<label for=\"radio$num\">Radio $num</label><br>";
                             $num++;
                         }
 
                         echo "<br>";
+                        $num = 1;
             
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo "<code>&lt;input type=\"radio\" name=\"radio\" id=\"radio$num\"&gt;</code>";
                             echo "<code>&lt;label for=\"radio$num\"&gt;Radio $num&lt;/label&gt;</code><br>";
                             $num++;
                         }
                     }
                     else if($opselected == "selecao"){
+                        $num = 1;
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo "<input type=\"checkbox\" name=\"checkbox$num\" id=\"checkbox$num\">";
                             echo "<label for=\"checkbox$num\">Caixa de Seleção $num</label><br>";
                             $num++;
                         }
                         echo "<br>";
+                        $num = 1;
             
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo "<code>&lt;input type=\"checkbox\" name=\"checkbox$num\" id=\"checkbox$num\"&gt;</code>";
                             echo "<code>&lt;label for=\"checkbox$num\"&gt;Caixa de Seleção $num&lt;/label&gt;</code><br>";
                             $num++;
@@ -188,8 +188,8 @@
                     }
                     else if($opselected == "faixa"){
                         $valuefaixa = 5;
+                        $num = 1;
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo "<input type=\"range\" name=\"range$num\" id=\"range$num\" min=\"0\" max =\"100\" value=\"$valuefaixa\">";
                             echo "<label for=\"range$num\">Faixa $num</label><br>";
                             $valuefaixa = $valuefaixa + 5;
@@ -198,8 +198,8 @@
                         echo "<br>";
             
                         $valuefaixa = 5;
+                        $num = 1;
                         for($i = 0; $i < $quant; $i++){
-                            $num = 1;
                             echo "<code>&lt;input type=\"range\" name=\"range$num\" id=\"range$num\" min=\"0\" max=\"100\" value=\"$valuefaixa\"&gt;</code>";
                             echo "<code>&lt;label for=\"range$num\"&gt;Faixa $num&lt;/label&gt;</code><br>";
                             $valuefaixa = $valuefaixa + 5;
