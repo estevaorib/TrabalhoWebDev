@@ -68,3 +68,39 @@
         $valorAtual = $total;
     }
     ?>
+    <?php
+        //if($rendimento_mensal == 0 ||){echo "Rendimento Mensal deve ser maior que 0(zero)";}
+        //else{
+        if($aporte_inicial >= 100 && $periodo != 0 && $rendimento_mensal != 0 && $aporte_mensal >= 100)
+        {
+            echo "<h2>Resultados da Simulação</h2> 
+            <table>
+            <tr>
+                <th>Mês</th>
+                <th>Valor Inicial</th>
+                <th>Aporte Mensal</th>
+                <th>Rendimento</th>
+                <th>Total</th>
+            </tr>";
+            
+        }
+        else{echo"";}
+        //}
+            ?>
+
+    <?php foreach ($resultados as $resultado): ?>
+    <tr>
+        <td><?php echo $resultado['mes']; ?></td>
+        <td><?php echo number_format($resultado['valor_inicial'], 2, ',', '.'); ?></td>
+        <td><?php echo number_format($resultado['aporte_mensal'], 2, ',', '.'); ?></td>
+        <td><?php echo number_format($resultado['rendimento'], 2, ',', '.'); ?></td>
+        <td><?php echo number_format($resultado['total'], 2, ',', '.'); ?></td>
+    </tr>
+    <?php endforeach; ?>
+    </table>
+    <p><a href="index.php">Página Inicial</a></p>
+    </main>
+
+    </body>
+
+</html>
