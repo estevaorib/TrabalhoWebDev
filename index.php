@@ -17,7 +17,7 @@
         <ul>
             <a href="../TrabalhoWebDev/quest1/questao1.php"><li>Questão 1</li></a>
             <a href="../TrabalhoWebDev/quest2/questao2.php"><li>Questão 2</li></a>
-            <a href="../TrabalhoWebDev/quest3/questao3.php"><li>Questão 3</li></a>
+            <a href="../TrabalhoWebDev/quest3/quest3a.php"><li>Questão 3</li></a>
             <a href="../TrabalhoWebDev/quest4/questao4.php"><li>Questão 4</li></a>
         </ul>
     </main>
