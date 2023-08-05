@@ -23,7 +23,7 @@
         <li><a href="quest3b.php?resposta1=E">Em Jotunheim, o mundo dos gigantes de rocha e de gelo.</a></li>
         </ol>
         
-        <p><a href="index.php">Página Inicial</a></p>
+        <p><a href="../index.php">Página Inicial</a></p>
     </main>
 
     <footer>

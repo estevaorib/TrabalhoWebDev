@@ -18,7 +18,7 @@
         <fieldset>
             <legend>Parâmetros</legend>
             <label for="aporte_inicial">Aporte inicial:</label>
-            <input type="number" name="aporte_inicial" id="aporte_inicial" min="100" max="999999.99" required>(Limite:
+            <input type="number" name="aporte_inicial" id="aporte_inicial" min="1" max="999999.99" required>(Limite:
             999.999,99)<br>
 
             <label for=" periodo">Período(meses):</label>
@@ -29,7 +29,7 @@
             20%)<br>
 
             <label for="aporte_mensal">Aporte mensal:</label>
-            <input type="number" name="aporte_mensal" id="aporte_mensal" min="100" required>(Limite: 999.999,99)<br>
+            <input type="number" name="aporte_mensal" id="aporte_mensal" min="1" required>(Limite: 999.999,99)<br>
 
             <input type="submit" value="Simular">
         </fieldset>
@@ -46,7 +46,7 @@
 
         $aporte_inicial = isset($_GET['aporte_inicial']) ? floatval($_GET['aporte_inicial']) : 0;
         $periodo = isset($_GET['periodo']) ? intval($_GET['periodo']) : 0;
-        $rendimento_mensal = isset($_GET['rendimento_mensal']) ? floatval($_GET['rendimento_mensal']) : 0.1;
+        $rendimento_mensal = isset($_GET['rendimento_mensal'])|| $rendimento_mensal != 0 ? floatval($_GET['rendimento_mensal']) : 0.1;
         $aporte_mensal = isset($_GET['aporte_mensal']) ? floatval($_GET['aporte_mensal']) : 0;
 
         //$aporte_inicial = floatval($_GET["aporte_inicial"]);
@@ -78,9 +78,9 @@
         ?>
 
     <?php
-        //if($rendimento_mensal == 0 ||){echo "Rendimento Mensal deve ser maior que 0(zero)";}
+        //if($rendimento_mensal == 0 ){echo "Rendimento Mensal deve ser maior que 0(zero)";}
         //else{
-        if($aporte_inicial >= 100 && $periodo != 0 && $rendimento_mensal != 0 && $aporte_mensal >= 100)
+        if($aporte_inicial >= 1 && $periodo != 0 && $rendimento_mensal >= 0 && $aporte_mensal >= 1)
         {
             echo "<h2>Resultados da Simulação</h2> 
             <table>
@@ -108,7 +108,7 @@
     <?php endforeach; ?>
     </table>
     <?php } ?>
-    <p><a href="index.php">Página Inicial</a></p>
+    <<p><a href="../index.php">Página Inicial</a></p>
     </main>
 
     <footer>

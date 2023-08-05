@@ -216,7 +216,7 @@
             }
         ?>
 
-        <p><a href="index.php">Página Inicial</a></p>
+        <p><a href="../index.php">Página Inicial</a></p>
     </main>
 
     <footer>
