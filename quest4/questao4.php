@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../trabalho3trimestre/styles/global.css">
+    <link rel="stylesheet" href="../styles/global.css">
 </head>
 <body>
     <header>
@@ -46,7 +46,7 @@
 
         $aporte_inicial = isset($_GET['aporte_inicial']) ? floatval($_GET['aporte_inicial']) : 0;
         $periodo = isset($_GET['periodo']) ? intval($_GET['periodo']) : 0;
-        $rendimento_mensal = isset($_GET['rendimento_mensal']) ? floatval($_GET['rendimento_mensal']) : 0;
+        $rendimento_mensal = isset($_GET['rendimento_mensal']) ? floatval($_GET['rendimento_mensal']) : 0.1;
         $aporte_mensal = isset($_GET['aporte_mensal']) ? floatval($_GET['aporte_mensal']) : 0;
 
         //$aporte_inicial = floatval($_GET["aporte_inicial"]);

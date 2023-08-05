@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 1</title>
-    <link rel="stylesheet" href="../trabalho3trimestre/styles/global.css">
+    <link rel="stylesheet" href="../styles/global.css">
 </head>
 <body>
     <header>
