@@ -1,24 +1,13 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+    <link rel="stylesheet" href="../styles/questao4.css">
     <link rel="stylesheet" href="../styles/global.css">
 </head>
-<style>
-    .entradas{
-        display: flex;
-        flex-direction: row;
-        gap: 3px;
-    }
-    .inputs{
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-    }
-</style>
 <body>
     <header>
         <h2>Desenvolvimento Web</h2>
