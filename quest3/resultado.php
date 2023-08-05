@@ -19,10 +19,6 @@
         <h1>Trabalho: Questão 03</h1>
 
         <?php
-        // $resposta1 = $_GET["resposta1"];
-        // $resposta2 = $_GET["resposta2"];
-        // $resposta3 = $_GET["resposta3"];
-        // $resposta4 = $_GET["resposta4"];
     
         $resposta1 = isset($_GET["resposta1"]) ? ($_GET["resposta1"]) : null;
         $resposta2 = isset($_GET["resposta2"]) ? ($_GET["resposta2"]) : null;
