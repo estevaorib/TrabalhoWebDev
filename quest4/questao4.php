@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/questao4.css">
     <link rel="stylesheet" href="../styles/global.css">
 </head>
+
 <body>
     <header>
         <h2>Desenvolvimento Web</h2>
@@ -75,7 +76,7 @@
 
             for ($mes = 1; $mes <= $periodo; $mes++) {
                 if ($mes === 1) {
-                    $aporte = 0; // No primeiro mês não há aporte mensal
+                    $aporte = 0; //No primeiro mês não há aporte mensal
                 } 
                 else {
                     $aporte = $aporte_mensal;
