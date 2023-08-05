@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../trabalho3trimestre/styles/global.css">
 </head>
 <body>
     <header>
@@ -33,6 +34,7 @@
             <input type="submit" value="Simular">
         </fieldset>
     </form>
+
     <?php
     if ($_SERVER["REQUEST_METHOD"] === "GET") {
         function calcularRendimento($valorInicial, $aporteMensal, $taxaRendimento)
@@ -41,33 +43,40 @@
             $total = $valorInicial + $aporteMensal + $rendimento;
             return array($rendimento, $total);
         }
-        $aporte_inicial = floatval($_GET["aporte_inicial"]);
-        $periodo = intval($_GET["periodo"]);
-        $rendimento_mensal = floatval($_GET["rendimento_mensal"]);
-        $aporte_mensal = floatval($_GET["aporte_mensal"]);
-    }
-    $resultados = array();
-    $valorAtual = $aporte_inicial;
-    for ($mes = 1; $mes <= $periodo; $mes++) {
-        if ($mes === 1) {
-            $aporte = 0; // No primeiro mês não há aporte mensal
-        } else {
-            $aporte = $aporte_mensal;
+
+        $aporte_inicial = isset($_GET['aporte_inicial']) ? floatval($_GET['aporte_inicial']) : 0;
+        $periodo = isset($_GET['periodo']) ? intval($_GET['periodo']) : 0;
+        $rendimento_mensal = isset($_GET['rendimento_mensal']) ? floatval($_GET['rendimento_mensal']) : 0;
+        $aporte_mensal = isset($_GET['aporte_mensal']) ? floatval($_GET['aporte_mensal']) : 0;
+
+        //$aporte_inicial = floatval($_GET["aporte_inicial"]);
+        //$periodo = intval($_GET["periodo"]);
+        //$rendimento_mensal = floatval($_GET["rendimento_mensal"]);
+        //$aporte_mensal = floatval($_GET["aporte_mensal"]);
+
+        $resultados = array();
+        $valorAtual = $aporte_inicial;
+        for ($mes = 1; $mes <= $periodo; $mes++) {
+            if ($mes === 1) {
+                $aporte = 0; // No primeiro mês não há aporte mensal
+            } else {
+                $aporte = $aporte_mensal;
+            }
+
+            list($rendimento, $total) = calcularRendimento($valorAtual, $aporte, $rendimento_mensal);
+
+            $resultados[] = array(
+                'mes' => $mes,
+                'valor_inicial' => $valorAtual,
+                'aporte_mensal' => $aporte,
+                'rendimento' => $rendimento,
+                'total' => $total
+            );
+
+            $valorAtual = $total;
         }
+        ?>
 
-        list($rendimento, $total) = calcularRendimento($valorAtual, $aporte, $rendimento_mensal);
-
-        $resultados[] = array(
-            'mes' => $mes,
-            'valor_inicial' => $valorAtual,
-            'aporte_mensal' => $aporte,
-            'rendimento' => $rendimento,
-            'total' => $total
-        );
-
-        $valorAtual = $total;
-    }
-    ?>
     <?php
         //if($rendimento_mensal == 0 ||){echo "Rendimento Mensal deve ser maior que 0(zero)";}
         //else{
@@ -98,9 +107,14 @@
     </tr>
     <?php endforeach; ?>
     </table>
+    <?php } ?>
     <p><a href="index.php">Página Inicial</a></p>
     </main>
 
-    </body>
+    <footer>
+        <p class="copy">Estevão Ribeiro e Ítalo Augusto - &copy;2023</p>
+    </footer>
+    
+</body>
 
 </html>
