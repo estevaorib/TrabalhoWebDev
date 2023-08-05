@@ -25,6 +25,7 @@
                 <div class="cabecalho">
                     <label for="quant">Quantidade de elementos: </label>
                     <?php echo "<input type=\"number\" name=\"quant\" id=\"quant\" min=1 max=15 value=\"$quant\">" ?>
+                    <label for="quant">(1 até 15)</label>
                 </div>
                 <div class="opcoes">
                     <div>
